@@ -1,6 +1,8 @@
+NOTE: This template can be downloaded [here](https://github.com/eclipsesource/openECTS-ecosystem/downloads) and edited with any text editor. Please keep the wiki syntax.
+##Proposal
 The [NewProjectName] project is a proposed open source project under the [ContainerProjectName] Container Project (WP1, WP1, ..).
 
-This proposal is in the Project Proposal Phase (as defined in the openETCS Development Process) and is written to declare its intent and scope. We solicit additional participation and input from the openETCS community. Please send all feedback to this mailing list xxx.
+This proposal is in the Project Proposal Phase (as defined in the openETCS Development Process) and is written to declare its intent and scope. We solicit additional participation and input from the openETCS community. Please send all feedback to this mailing list openetcs-proposals@googlegroups.com.
 ## Background
 ## Scope
 ## Description
