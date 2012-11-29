@@ -11,6 +11,8 @@
 \ProvidesClass{openetcs}
 [2012/10/11 v0.1 Typesetting Technical Information Article of
 openETCS project ]
+\newcommand{\IsLicensedUnderCC}[1]{#1}
+\DeclareOption{nocc}{\renewcommand{\IsLicensedUnderCC}[1]{ }}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
 \LoadClass[11pt,twoside]{article}
@@ -104,7 +106,7 @@ openETCS project ]
 \rhead{\textsf{\textbf{\footnotesize\thepage}}}
 \chead{}
 \lfoot{}
-\cfoot{\color{blue}\textsf{\textbf{\textit{openETCS}}}\color{black} - \includegraphics[width=3em]{ccbysa.png}}
+\cfoot{\color{blue}\textsf{\textbf{\textit{openETCS}}}\color{black}\IsLicensedUnderCC{ - \includegraphics[width=3em]{ccbysa.png}}}
 \rfoot{}
 \newif\if@frontmatter
 \@frontmatterfalse
@@ -291,7 +293,7 @@ TERMS AND CONDITIONS.
    \end{@coverlist}%
    \vfill
    \begin{@coverlist}%
-     \@distributionfont\@distribution
+     \IsLicensedUnderCC{\@distributionfont\@distribution}
    \end{@coverlist}%
    \newpage\thispagestyle{empty}\hbox{}\newpage
   \thispagestyle{empty}%
@@ -321,7 +323,7 @@ TERMS AND CONDITIONS.
    \end{minipage}\rule[-2.7in]{\z@}{3.7in}\par
    \begin{minipage}{\textwidth}
      \@reporttype\par\vspace*{3\p@}%
-     {\@distributionfont\@distribution\par}%
+     {\IsLicensedUnderCC{\@distributionfont\@distribution\par}}%
    \end{minipage}
  \end{@titlelist}%
   \vfill
@@ -352,6 +354,7 @@ TERMS AND CONDITIONS.
     \box\abstractbox
     \prevdepth\z@
   \fi
+  \IsLicensedUnderCC{
   \vfill
   \bgroup
   \setlength{\fboxsep}{5\p@}%
@@ -360,6 +363,7 @@ TERMS AND CONDITIONS.
         \parskip\baselineskip
         \textbf{Disclaimer:} \@disclaimer}}}%
   \egroup
+  }
   \clearpage}
 \def\cl@chapter{}
 \@addtoreset{section}{chapter}%
