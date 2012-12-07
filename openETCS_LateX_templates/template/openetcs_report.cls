@@ -80,37 +80,13 @@ openETCS project based on ERDC class v1.1]
 %\setlength\RaggedRightParindent{\parindent}
 %\RaggedRight
 \RequirePackage{microtype}
-%\renewcommand\normalsize{%
-%   \@setfontsize\normalsize\@xiipt{16}%
-%   \abovedisplayskip 16\p@ \@plus3\p@ \@minus7\p@
-%   \abovedisplayshortskip \z@ \@plus3\p@
-%   \belowdisplayshortskip 6.5\p@ \@plus3.5\p@ \@minus3\p@
-%   \belowdisplayskip \abovedisplayskip
-%   \let\@listi\@listI}
+\RequirePackage[utf8x]{inputenc}
 \normalsize
-
-% Original fonts (à tester sur miktex)
-%\usepackage{mathgifg}
-%\usepackage{courier}
 
 % PdfLaTeX Choix 1 "times Helvet et math" http://www.cuk.ch/articles/4237
 \usepackage[T1]{fontenc}
 \usepackage{txfonts}
 
-% PdfLaTeX Choix 2 http://www.cuk.ch/articles/4237
-% \usepackage{fourier}
-% \usepackage[scaled=0.875]{helvet}
-% \usepackage{courier}
-
-% XeLaTeX
-%\usepackage{fontspec}
-%\usepackage{xltxtra}
-%\defaultfontfeatures{Mapping=tex-text}
-%\setmainfont{Georgia}
-%\setmathrm{Georgia}
-%\setsansfont{Verdana}
-%\setmathsf{Verdana}
-%\setmonofont{Courier New}
 
 \def\@projectfont{%
   \sffamily\itshape\bfseries\fontsize{22pt}{25pt}\selectfont}
@@ -350,8 +326,9 @@ TERMS AND CONDITIONS.
    \begin{@coverlist}%
      \IsLicensedUnderCC{\@distributionfont\@distribution}
    \end{@coverlist}%
-   \newpage\thispagestyle{empty}\hbox{}\newpage
-  \thispagestyle{empty}%
+   \newpage
+   This page is intentionally left blank
+   \thispagestyle{empty}\hbox{}\newpage
   \setcounter{page}{1}%
   \vspace*{-1.5in}%
   \vspace*{-\topmargin}%
@@ -514,6 +491,45 @@ TERMS AND CONDITIONS.
   \addcontentsline{toc}{subsection}{\itshape\fontsize{9}{12}\selectfont#1}%
   {\noindent\raggedright\interlinepenalty\@M
    \normalsize\sffamily\bfseries#1}\nobreak\par}
+\renewcommand\subsubsection{\par
+  \addpenalty\@secpenalty\nobreak
+  \secdef\@subsubsection\@ssubsubsection}
+\def\@subsubsection[#1]#2{%
+  \ifnum2>\c@secnumdepth
+     \addcontentsline{toc}{subsubsection}{\itshape#1}%
+  \else
+    \refstepcounter{subsubsection}%
+    \addcontentsline{toc}{subsubsection}{\itshape\fontsize{9}{12}\selectfont
+      \protect\numberline{\thesubsubsection}%
+      #1}%
+  \fi
+  {\noindent\raggedright\interlinepenalty\@M
+   \normalsize\sffamily\bfseries
+   \ifnum2>\c@secnumdepth\else\thesubsubsection\hspace{1em}\fi#2}\nobreak\par}
+\def\@ssubsubsection#1{%
+  \addcontentsline{toc}{subsubsection}{\itshape\fontsize{9}{12}\selectfont#1}%
+  {\noindent\raggedright\interlinepenalty\@M
+   \normalsize\sffamily\bfseries#1}\nobreak\par}
+\renewcommand\paragraph{\par
+  \addpenalty\@secpenalty\nobreak
+  \secdef\@paragraph\@sparagraph}
+\def\@paragraph[#1]#2{%
+  \ifnum2>\c@secnumdepth
+     \addcontentsline{toc}{paragraph}{\itshape#1}%
+  \else
+    \refstepcounter{paragraph}%
+    \addcontentsline{toc}{paragraph}{\itshape\fontsize{9}{12}\selectfont
+      \protect\numberline{\theparagraph}%
+      #1}%
+  \fi
+  {\noindent\raggedright\interlinepenalty\@M
+   \normalsize\sffamily\bfseries
+   #2}
+ \nobreak\par}
+\def\@sparagraph#1{%
+  \addcontentsline{toc}{paragraph}{\itshape\fontsize{9}{12}\selectfont#1}%
+  {\noindent\raggedright\interlinepenalty\@M
+   \normalsize\sffamily\bfseries#1}\nobreak\par}
 \def\specialchapter#1{%
   \clearpage
   \global\@topnum\z@
@@ -623,4 +639,4 @@ labelsep=period,aboveskip=3pt}
 \def\tagform@@#1{\maketag@@@@{(\ignorespaces#1\unskip\@@italiccorr)}}
 \endinput
 %%
-%% End of file `erdc.cls'.
+%% End of file `openetcs_repport.cls'.
