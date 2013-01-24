@@ -3,7 +3,8 @@
 
 
 
-%% For openETCS ITEA2 Project 
+%% For openETCS ITEA2 Project
+
 
 
 %
@@ -11,6 +12,8 @@
 \ProvidesClass{openetcs}
 [2012/10/11 v0.1 Typesetting Technical Information Article of
 openETCS project ]
+%% David Mentres FIXME macro
+\newcommand{\FIXME}[1]{\marginpar{FIXME}\textsf{FIXME: #1}}
 \newcommand{\IsLicensedUnderCC}[1]{#1}
 \DeclareOption{nocc}{\renewcommand{\IsLicensedUnderCC}[1]{ }}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
@@ -194,8 +197,8 @@ openETCS project ]
       \parsep16\p@ \topsep\z@
       \let\fullwidthdisplay\relax
     }%
-    \item[\hskip\labelsep\bfseries Abstract:]% 
-}{% 
+    \item[\hskip\labelsep\bfseries Abstract:]%
+}{%
  \endlist\egroup}
       \long\def\disclaimer#1{\long\gdef\@disclaimer{#1}}
       \disclaimer{
