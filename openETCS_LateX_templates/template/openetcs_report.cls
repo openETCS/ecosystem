@@ -2,13 +2,13 @@
 %% A LaTeX class based on:
 
 %% LaTeX Style For Technical Information Reports of the
-%%	       Engineer Research and Development Center
-%%		      US Army Corps of Engineers
-%%			   2009/07/22 v1.1
+%%             Engineer Research and Development Center
+%%                    US Army Corps of Engineers
+%%                         2009/07/22 v1.1
 %% Copyright 2008, Boris Veytsman
 %% This work may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either
-%% version 1.3 of this license or (at your option) any 
+%% version 1.3 of this license or (at your option) any
 %% later version.
 
 %% For openETCS ITEA2 Project (To Do: Verify consistency with cc-by-sa
@@ -22,17 +22,17 @@
 %% The original source files were:
 %%
 %% erdc.dtx  (with options: `class')
-%% 
+%%
 %% IMPORTANT NOTICE:
-%% 
+%%
 %% For the copyright see the source file.
-%% 
+%%
 %% Any modified versions of this file must be renamed
 %% with new filenames distinct from erdc.cls.
-%% 
+%%
 %% For distribution of the original source see the terms
 %% for copying and modification in the file erdc.dtx.
-%% 
+%%
 %% This generated file may be distributed as long as the
 %% original source files, as listed above, are part of the
 %% same distribution. (The sources need not necessarily be
@@ -52,6 +52,7 @@
 %%   Right bracket \]     Circumflex    \^     Underscore    \_
 %%   Grave accent  \`     Left brace    \{     Vertical bar  \|
 %%   Right brace   \}     Tilde         \~}
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{openetcs}
 [2012/08/03 v0.1 Typesetting Technical Information Reports of
@@ -64,6 +65,9 @@ openETCS project based on ERDC class v1.1]
 % \DeclareOption{10pt}{\erdc@size@warning{\CurrentOption}}%
 % \DeclareOption{11pt}{\erdc@size@warning{\CurrentOption}}%
 % \DeclareOption{12pt}{\erdc@size@warning{\CurrentOption}}%
+
+%% David Mentres FIXME macro
+\newcommand{\FIXME}[1]{\marginpar{FIXME}\textsf{FIXME: #1}}
 \newcommand{\IsLicensedUnderCC}[1]{#1}
 \DeclareOption{nocc}{\renewcommand{\IsLicensedUnderCC}[1]{ }}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
@@ -250,8 +254,8 @@ openETCS project based on ERDC class v1.1]
       \parsep16\p@ \topsep\z@
       \let\fullwidthdisplay\relax
     }%
-    \item[\hskip\labelsep\bfseries Abstract:]% 
-}{% 
+    \item[\hskip\labelsep\bfseries Abstract:]%
+}{%
  \endlist\egroup}
       \long\def\disclaimer#1{\long\gdef\@disclaimer{#1}}
       \disclaimer{
