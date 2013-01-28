@@ -1,4 +1,4 @@
-openECTS-ecosystem
+openETCS-ecosystem
 ==================
 
-openECTS Ecosystem
+openETCS Ecosystem
