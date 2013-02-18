@@ -310,7 +310,7 @@ TERMS AND CONDITIONS.
      \hfill\parbox{145\p@}{\centering
        \includegraphics[width=145\p@]{itea}\\
        {\bfseries
-         ITEA2 Project\\2012 -- 2015}}\\
+         ITEA2 Project\\Call 6 11025\\2012 -- 2015}}\\
        \par
      \vspace{0.5cm}%
      {\@wpfont\@wp\par}%
