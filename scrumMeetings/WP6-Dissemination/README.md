@@ -1,4 +1,0 @@
-openETCS-ecosystem
-==================
-
-openETCS Ecosystem
