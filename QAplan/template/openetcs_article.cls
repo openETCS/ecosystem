@@ -277,7 +277,7 @@ TERMS AND CONDITIONS.
    This page is intentionally left blank
    \thispagestyle{empty}\hbox{}\newpage
   \setcounter{page}{1}%
-  \vspace*{-1.5in}%
+  \vspace*{-0.5in}%
   \vspace*{-\topmargin}%
   \begin{@titlelist}%
     \sffamily\fontseries{k}\selectfont
