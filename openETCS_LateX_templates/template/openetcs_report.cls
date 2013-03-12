@@ -234,7 +234,7 @@ openETCS project based on ERDC class v1.1]
 \def\reporttype#1{\gdef\@reporttype{#1}}
 \reporttype{}
 \def\distribution#1{\gdef\@distribution{#1}}
-\distribution{This work is licensed under a Creative Commons
+\distribution{This work is licensed under  the European Union Public Licence (EUPL v.1.1) a Creative Commons
   Attribution-ShareAlike 3.0 Unported License.\\ \includegraphics[width=40pt]{ccbysabig.png}}
 \def\preparedfor#1{\gdef\@preparedfor{#1}}
 \preparedfor{ITEA2 openETCS consortium\\ Europa}
@@ -259,7 +259,7 @@ openETCS project based on ERDC class v1.1]
  \endlist\egroup}
       \long\def\disclaimer#1{\long\gdef\@disclaimer{#1}}
       \disclaimer{
-\textbf{This work is licensed under a Creative Commons
+\textbf{This work is licensed under the European Union Public Licence (EUPL v.1.1) and a Creative Commons
   Attribution-ShareAlike 3.0 -- (cc by-sa 3.0)}
 
 THE WORK IS PROVIDED UNDER THE TERMS OF THIS CREATIVE COMMONS PUBLIC
@@ -273,7 +273,8 @@ LICENSE MAY BE CONSIDERED TO BE A CONTRACT, THE LICENSOR GRANTS YOU
 THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH
 TERMS AND CONDITIONS.
 
-\url{http://creativecommons.org/licenses/by-sa/3.0/}
+\url{http://creativecommons.org/licenses/by-sa/3.0/}\\
+\url{http://joinup.ec.europa.eu/software/page/eupl/licence-eupl}
 }
 \newenvironment{@coverlist}{\begin{list}{}{%
       \leftmargin40\p@\rightmargin-85\p@%
@@ -334,7 +335,7 @@ TERMS AND CONDITIONS.
    This page is intentionally left blank
    \thispagestyle{empty}\hbox{}\newpage
   \setcounter{page}{1}%
-  \vspace*{-1.5in}%
+  \vspace*{-0.5in}%
   \vspace*{-\topmargin}%
   \begin{@titlelist}%
     \sffamily\fontseries{k}\selectfont
