@@ -505,18 +505,18 @@ TERMS AND CONDITIONS.
   {\parskip2.5\p@\footnotesize\sffamily\fontseries{k}\selectfont\raggedright
     \@starttoc{toc}}}
 \renewcommand\listoffigures{%
-  \chapter{\listfigurename}%
+  \specialchapter{\listfigurename}%
   \def\numberline##1{Figure ##1. }%
   {\parskip2.5\p@\footnotesize\sffamily\fontseries{k}\selectfont\raggedright
     \@starttoc{lof}}}
 \renewcommand\listoftables{%
-  \chapter{\listtablename}%
+  \specialchapter{\listtablename}%
   \def\numberline##1{Table ##1. }%
   {\parskip2.5\p@\footnotesize\sffamily\fontseries{k}\selectfont\raggedright
     \@starttoc{lot}}}
 \def\listfiguretablename{Figures and Tables}
 \newcommand\listoffiguresandtables{%
-  \chapter{\listfiguretablename}
+  \specialchapter{\listfiguretablename}
   {\sffamily\bfseries\normalsize Figures\par}%
   \vspace*{10pt}%
   \def\numberline##1{Figure ##1. }%
