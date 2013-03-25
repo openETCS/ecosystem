@@ -137,7 +137,7 @@ openETCS project based on ERDC class v1.1]
 \raggedbottom
 \RequirePackage{fancyhdr}
 \renewcommand{\headrulewidth}{0.5pt}
-\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.5pt}
 \fancyhfoffset{35pt}
 \pagestyle{fancy}
 \lhead{\textsf{\textbf{\footnotesize\@reportnum}}}
@@ -146,7 +146,7 @@ openETCS project based on ERDC class v1.1]
 \lfoot{}
 %% \cfoot{\color{blue}\textsf{\textbf{\textit{openETCS}}}\color{black}
 %% \IsLicensedUnderCC{ - \includegraphics[width=3em]{oOLT.png}}}
-\cfoot{\small\textit{This work is licensed under the "openETCS Open License Terms" (oOLT) dual Licensing}} 
+\cfoot{\scriptsize\textit{This work is licensed under the "openETCS Open License Terms" (oOLT).}} 
 %% \includegraphics[width=30pt]{oOLT.png}}
 \rfoot{}
 \newif\if@frontmatter
@@ -368,7 +368,7 @@ TERMS AND CONDITIONS.
    \end{minipage}\rule[-2.7in]{\z@}{3.7in}\par
    \begin{minipage}{\textwidth}
      \@reporttype\par\vspace*{3\p@}%
-     {\IsLicensedUnderCC{\@distributionfont\@distribution\par}}%
+     %{\IsLicensedUnderCC{\@distributionfont\@distribution\par}}%
    \end{minipage}
  \end{@titlelist}%
   \vfill
