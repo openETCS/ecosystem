@@ -2,6 +2,7 @@
 % Use the option "nocc" if the document is not licensed under Creative Commons
 %\documentclass[nocc]{template/openetcs_report}
 \usepackage{lipsum,url}
+\usepackage[modulo]{lineno}
 \graphicspath{{./template/}{.}{./images/}}
 \begin{document}
 \frontmatter
@@ -68,6 +69,11 @@
 \maketitle
 \tableofcontents
 \listoffiguresandtables
+
+%=============================
+%Uncomment the next line if you need line numbers for tracebility when the document is in review
+%\linenumbers
+
 %=============================
 % The actual document starts below this line
 %=============================
