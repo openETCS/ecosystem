@@ -15,7 +15,8 @@ openETCS project ]
 %% David Mentres FIXME macro
 \newcommand{\FIXME}[1]{\marginpar{FIXME}\textsf{FIXME: #1}}
 \newcommand{\IsLicensedUnderCC}[1]{#1}
-\DeclareOption{nocc}{\renewcommand{\IsLicensedUnderCC}[1]{ }}
+\newcommand{\IsNonPublic}[1]{}
+\DeclareOption{nocc}{\renewcommand{\IsLicensedUnderCC}[1]{} \renewcommand{\IsNonPublic}[1]{#1}}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
 \LoadClass[11pt,twoside]{article}
@@ -84,7 +85,8 @@ openETCS project ]
 \rhead{\textsf{\textbf{\footnotesize\thepage}}}
 \chead{}
 \lfoot{}
-\cfoot{\scriptsize \textit{This work is licensed under the "openETCS Open License Terms" (oOLT).}}
+\IsLicensedUnderCC{\cfoot{\scriptsize \textit{This work is licensed under the "openETCS Open License Terms" (oOLT).}}}
+\IsNonPublic{\cfoot{\scriptsize \textit{Confidential -- only for members of the consortium, including ITEA2 services.}}}
 %\cfoot{\color{blue}\textsf{\textbf{\textit{openETCS}}}\color{black}\IsLicensedUnderCC{ - \includegraphics[width=3em]{ccbysa.png}}}
 \rfoot{}
 \newif\if@frontmatter
@@ -276,6 +278,7 @@ TERMS AND CONDITIONS.
    \vfill
    \begin{@coverlist}%
      \IsLicensedUnderCC{\@distributionfont\@distribution}
+     \IsNonPublic{\@distributionfont \centering \large Confidential -- only for members of the consortium, including ITEA2 services.}
    \end{@coverlist}%
    \newpage
    This page is intentionally left blank
