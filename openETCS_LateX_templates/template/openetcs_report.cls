@@ -93,6 +93,19 @@ openETCS project based on ERDC class v1.1]
 \usepackage[T1]{fontenc}
 \usepackage{txfonts}
 
+% definition of approval variables
+\def\creatorname#1{\gdef\@creatorname{#1}}
+\def\creatoraffil#1{\gdef\@creatoraffil{#1}}
+
+\def\techassessorname#1{\gdef\@techassessorname{#1}}
+\def\techassessoraffil#1{\gdef\@techassessoraffil{#1}}
+
+\def\qualityassessorname#1{\gdef\@qualityassessorname{#1}}
+\def\qualityassessoraffil#1{\gdef\@qualityassessoraffil{#1}}
+
+\def\approvalname#1{\gdef\@approvalname{#1}}
+\def\approvalaffil#1{\gdef\@approvalaffil{#1}}
+
 
 %% \setlength{\textheight}{15cm}%%unsere änderung
 
@@ -364,16 +377,24 @@ TERMS AND CONDITIONS.
       \bfseries\@subtitle\par
   \end{minipage}\rule[-0.7in]{\z@}{1in}\par
   
-    \large Document approbation
-      
-          \begin{tabular}{ |p{4.8cm}|  p{4.8cm}|  p{4.8cm}| }
-          \hline
-          \tiny date / signature \vspace{1.5cm} & \tiny date / signature & \tiny date / signature \\
-          \hline
-          \normalsize \centering author & \normalsize \centering work package leader & \normalsize \hfill project leader \hfill\mbox{} \\
-          \hline
-          \end{tabular}
-          \vspace{1cm}
+% document approbation
+  
+  \large Document approbation
+    
+        \begin{tabular}{ |p{3.6cm}|  p{3.6cm}|  p{3.6cm}| p{3.6cm}|}
+        \hline
+        \normalsize Lead author: & \normalsize Technical assessor: & \normalsize  Quality assessor: & \normalsize Project lead: \\
+        \hline
+        \tiny location / date \vspace{1.2cm} & \tiny location / date &\tiny location / date &\tiny location / date \\
+        \hline
+        \tiny signature \vspace{1.2cm} & \tiny signature &\tiny signature &\tiny signature \\
+        
+        \small \@creatorname & \small\@techassessorname & \small\@qualityassessorname & \small\@approvalname \\
+        
+        \small(\@creatoraffil ) & \small(\@techassessoraffil ) & \small(\@qualityassessoraffil ) & \small(\@approvalaffil ) \\
+        \hline        
+        \end{tabular}
+        \vspace{.5cm}
           
           
      \def\author##1{%
