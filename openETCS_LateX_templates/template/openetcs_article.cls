@@ -300,6 +300,19 @@ TERMS AND CONDITIONS.
       \vspace*{3\p@}%
       \bfseries\@subtitle\par
   \end{minipage}\rule[-0.7in]{\z@}{1in}\par
+  
+  
+  \large Document approbation
+    
+        \begin{tabular}{ |p{4.8cm}|  p{4.8cm}|  p{4.8cm}| }
+        \hline
+        \tiny date / signature \vspace{1.5cm} & \tiny date / signature & \tiny date / signature \\
+        \hline
+        \normalsize \centering author & \normalsize \centering work package leader & \normalsize \hfill project leader \hfill\mbox{} \\
+        \hline
+        \end{tabular}
+        \vspace{1cm}
+        
      \def\author##1{%
        \def\@tempa{##1}%
        \nxandlist{\unskip, }{\unskip{} \@@and~}{\unskip{} \@@and~}\@tempa
@@ -312,7 +325,11 @@ TERMS AND CONDITIONS.
 %     {\IsLicensedUnderCC{\@distributionfont\@distribution\par}}%
    \end{minipage}
  \end{@titlelist}%
-  \vfill
+  %\vfill
+
+
+  
+  
   \begin{@titlelist}%
     \sffamily\normalsize\fontseries{k}\selectfont
     \ifx\@additionalinfo\@empty\else\@additionalinfo\par\fi
@@ -333,6 +350,8 @@ TERMS AND CONDITIONS.
              \fi
        \end{@titleblock}
     \fi
+    
+    
   \end{@titlelist}%
   \clearpage
   \ifvoid\abstractbox
